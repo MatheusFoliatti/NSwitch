@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
 import Topo from './components/Topo/index'
@@ -6,12 +5,19 @@ import Conteudo from './components/Conteudo/index'
 
 export default function App() {
   return (
-    <View>
+    <View style={stylesGlobal.containerGlobal}>
+        <Topo />
         <Conteudo />
-
-      <Text> AAAAAAAAAAAAAAAAAAAAAA </Text>
-      
     </View>
   );
 }
 
+const stylesGlobal = StyleSheet.create({
+  containerGlobal: {
+      width:'100%',
+      height:'100%',  
+      justifyContent:'center',
+      alignItems:'center',
+
+  }
+})
